@@ -15,6 +15,16 @@
     - Command: php artisan key:generate
     - Command: php artisan serve
 
+### Cron Job / Scheduler Use
+   To run a cron job / scheduler: It has 3 steps. 
+   1) Making Command & Updated Generated File. 
+       - Command: php artisan make:command GenerateJsonFile
+       - Command: Follow $signature variable.
+       - Command: Follow handle() function .
+   2) Set / Add to kernel Scheduler. Update - app/console/Kernel.php
+   3) Run scheduler. Rund Command in Terminal: php artisan schedule:work (for localhost) & php artisan schedule:run (live)
+
+
 ## Credit
 
 Islam Hossain
