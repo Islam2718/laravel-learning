@@ -16,6 +16,9 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         // $schedule->command('inspire')->hourly();
+        $schedule->command('log:notification')->everyMinute();
+        $schedule->command('export:database-to-json')->everyMinute();
+        // $schedule->command('log:notification')->everyTenSeconds();
     }
 
     /**
